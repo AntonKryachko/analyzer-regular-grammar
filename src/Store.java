@@ -3,7 +3,20 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Store {
+    /**
+     * Список типа TestData реализованный структурой данных - массив
+     */
     private List<TestData> testDataList = new ArrayList<>();
+    /**
+     * Метод-конструктор
+     * при инициализации вводит в поле testDataList некоторые значения
+     * в данном случае
+     * 1) вектор нетерминалов
+     * 2) вектор терминалов
+     * 3) матрица следующих состояний
+     * 4) тестовые наборы
+     * Для примера выбраны следующие варианты 8 и 4
+     */
     Store(){
         testDataList.add(new TestData(
                 new String[]{"F", "A", "B", "C", "D", "N"},
@@ -32,6 +45,10 @@ public class Store {
         ));
     }
 
+    /**
+     * Метод возвращающий список тестовых данных
+     * @return
+     */
     public List<TestData> getTestDataList() {
         return testDataList;
     }
